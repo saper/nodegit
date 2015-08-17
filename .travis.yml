@@ -7,7 +7,6 @@ addons:
       - gcc-4.9
       - g++-4.9
       - lcov
-      - gcov
 env:
   matrix:
     - export NODE_VERSION="0.12"
