@@ -18,6 +18,7 @@ init:
 
 # what combinations to test
 environment:
+  GYP_MSVS_VERSION: 2013
   matrix:
     # Node.js
     # io.js
@@ -39,7 +40,7 @@ install:
   - cmd: SET GIT_SSH=c:\projects\nodegit\vendor\plink.exe
   - ps: Start-Process c:\projects\nodegit\vendor\pageant.exe c:\projects\nodegit\vendor\private.ppk
   - cmd: npm install -g node-gyp
-  - npm install --msvs_version=2013
+  - npm install
 
 test_script:
   - node --version
