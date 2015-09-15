@@ -99,7 +99,7 @@ function build() {
 
   builder = path.resolve(".", "node_modules", ".bin", builder);
   builder = builder.replace(/\s/g, "\\$&");
-  var cmd = [prefix, builder, "rebuild", target, debug, distUrl]
+  var cmd = [prefix, builder, "rebuild", "--verbose", target, debug, distUrl]
     .join(" ").trim();
 
   require("child_process").exec(cmd, opts, function(err, stdout, stderr) {
