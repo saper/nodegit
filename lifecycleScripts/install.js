@@ -104,8 +104,8 @@ function build() {
       var cmd = [prefix, builder, "rebuild", target, debug, distUrl]
         .join(" ").trim();
 
-      console.log('env:', process.env);
-      console.log('options:', opts);
+      console.info("env:", process.env);
+      console.info("options:", opts);
       return exec(cmd, opts);
     })
     .then(function() {
