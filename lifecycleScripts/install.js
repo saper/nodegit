@@ -102,16 +102,20 @@ function build() {
   var cmd = [prefix, builder, "rebuild", target, debug, distUrl]
     .join(" ").trim();
 
-  return exec(cmd, opts)
-    .then(function() {
+  require("child_process").exec(cmd, opts, function(err, stdout, stderr) {
+     if (err) {
+        console.info("[nodegit] Compilation failed.");
+        console.error(err);
+        console.info("[nodegit] Compilation output:");
+        console.error(stdout);
+        console.info("[nodegit] Compilation errors:");
+        console.error(stderr);
+        console.info("[nodegit] Exiting.");
+        process.exit(13);
+     } else {
         console.info("[nodegit] Compilation complete.");
         console.info("[nodegit] Completed installation successfully.");
-        process.exitCode = 0;
-      },
-      function(err, stderr) {
-        console.error(err);
-        console.error(stderr);
-        process.exitCode = 13;
-      }
-    );
+        process.exit(0);
+     }
+  });
 }
