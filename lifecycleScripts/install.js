@@ -76,6 +76,7 @@ function build() {
     env: process.env
   };
 
+  console.info("options:", opts);
   var prefix = "";
   var target = "";
   var debug = (process.env.BUILD_DEBUG ? " --debug" : "");
@@ -104,8 +105,6 @@ function build() {
       var cmd = [prefix, builder, "rebuild", target, debug, distUrl]
         .join(" ").trim();
 
-      console.info("env:", process.env);
-      console.info("options:", opts);
       return exec(cmd, opts);
     })
     .then(function() {
