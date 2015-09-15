@@ -72,7 +72,7 @@ function build() {
 
   var procenv = {};
   for (var envvar in process.env) {
-    if (process.env[envvar] !== undefined) {
+    if (process.env[envvar]) {
       procenv[envvar] = process.env[envvar];
     }
   }
