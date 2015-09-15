@@ -70,10 +70,17 @@ function build() {
     console.info("[nodegit] Building native node module.");
   }
 
+  var procenv = {};
+  for (var envvar in process.env) {
+    if (process.env[envvar] !== undefined) {
+      procenv[envvar] = process.env[envvar];
+    }
+  }
+
   var opts = {
     cwd: ".",
     maxBuffer: Number.MAX_VALUE,
-    env: process.env
+    env: procenv
   };
 
   console.info("options:", opts);
