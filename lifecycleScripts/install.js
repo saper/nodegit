@@ -72,7 +72,7 @@ function build() {
 
   var procenv = {};
   for (var envvar in process.env) {
-    if (process.env[envvar]) {
+    if (envvar !== "npm_config_argv" && process.env[envvar]) {
       procenv[envvar] = process.env[envvar];
     }
   }
