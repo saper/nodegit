@@ -35,6 +35,7 @@ install:
   - cmd: SET GIT_SSH=c:\projects\nodegit\vendor\plink.exe
   - ps: Start-Process c:\projects\nodegit\vendor\pageant.exe c:\projects\nodegit\vendor\private.ppk
   - cmd: npm install -g node-gyp
+  - set
   - npm install
 
 test_script:
