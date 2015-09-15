@@ -33,11 +33,9 @@
   "engines": {
     "node": ">= 0.12"
   },
-  "bundledDependencies": [
-    "node-pre-gyp"
-  ],
   "dependencies": {
     "fs-extra": "^0.18.2",
+    "node-gyp": "^3.0.1",
     "node-pre-gyp": "^0.6.5",
     "nodegit-promise": "^3.0.1",
     "npm": "^2.9.0",
@@ -54,7 +52,6 @@
     "lodash": "^3.8.0",
     "mocha": "^2.2.4",
     "nan": "^2.0.9",
-    "node-gyp": "^3.0.1",
     "nw-gyp": "^0.12.4",
     "request": "^2.55.0",
     "tar": "^2.1.0"

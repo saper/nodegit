@@ -35,7 +35,6 @@ matrix:
 install:
   - ps: Install-Product node $env:nodejs_version
   - ps: Start-Process c:\projects\nodegit\vendor\pageant.exe c:\projects\nodegit\vendor\private.ppk
-  - cmd: npm install -g node-gyp
   - npm install
 
 test_script:
