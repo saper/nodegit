@@ -22,7 +22,7 @@
       ],
       "dependencies": [
         "zlib",
-        "<(module_root_dir)/vendor/http_parser/http_parser.gyp:http_parser",
+        "http_parser/http_parser.gyp:http_parser",
         "libssh2",
         "openssl"
       ],
