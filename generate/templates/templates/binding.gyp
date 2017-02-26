@@ -34,6 +34,7 @@
         "vendor/libv8-convert",
         "vendor/libssh2/include",
         "vendor/openssl/openssl/include",
+        "/usr/local/include",
         "<!(node -e \"require('nan')\")"
       ],
 
